@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Report an Issue | Campus SOS</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css">
+
+</head>
+
+
+<body>
+
+
+  <header>
+
+    <div class="container">
+
+      <nav>
+
+        <a
+          class="brand"
+          href="index.html">
+
+          <span class="brand-mark">
+            SOS
+          </span>
+
+          <span>
+            Campus SOS
+          </span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="resources.html">
+            Resources
+          </a>
+
+          <a href="emergency.html">
+            Emergency
+          </a>
+
+          <a href="report.html">
+            Report Issue
+          </a>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <section class="page-hero">
+
+    <div class="container">
+
+      <span class="eyebrow">
+        Student feedback
+      </span>
+
+      <h1>
+        Report an Issue
+      </h1>
+
+      <p>
+        Help improve the campus experience
+        by describing a problem or concern.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <main class="page-main">
+
+    <div class="page-content">
+
+      <div class="container">
+
+
+        <div class="info-card">
+
+          <h2>
+            What would you like to report?
+          </h2>
+
+
+          <form
+            id="reportForm">
+
+
+            <div class="field">
+
+              <label for="issueType">
+                Issue type
+              </label>
+
+              <select
+                id="issueType"
+                required>
+
+                <option value="">
+                  Select issue
+                </option>
+
+                <option>
+                  Hostel
+                </option>
+
+                <option>
+                  Medical
+                </option>
+
+                <option>
+                  Safety
+                </option>
+
+                <option>
+                  Academic
+                </option>
+
+                <option>
+                  Technical
+                </option>
+
+                <option>
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="issueLocation">
+                Location
+              </label>
+
+              <input
+                id="issueLocation"
+                type="text"
+                placeholder="Example: Hostel 12"
+                required>
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="issueDescription">
+                Describe the issue
+              </label>
+
+              <textarea
+                id="issueDescription"
+                rows="6"
+                placeholder="Explain what happened..."
+                required>
+              </textarea>
+
+            </div>
+
+
+            <button
+              class="btn btn-primary"
+              type="submit">
+
+              Submit Report
+
+            </button>
+
+
+          </form>
+
+
+          <p
+            id="reportMessage"
+            style="margin-top:1rem;">
+          </p>
+
+        </div>
+
+
+        <div class="notice">
+
+          <strong>
+            Emergency?
+          </strong>
+
+          If the situation is urgent or
+          dangerous, do not wait for a report
+          form. Use the emergency page and
+          contact the appropriate emergency
+          service immediately.
+
+        </div>
+
+
+        <br>
+
+
+        <a
+          class="btn"
+          href="index.html">
+
+          ← Back to Home
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <p>
+        Campus SOS · Independent student project
+      </p>
+
+      <p>
+        Student Issue Reporting
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    const reportForm =
+      document.querySelector("#reportForm");
+
+    const reportMessage =
+      document.querySelector("#reportMessage");
+
+
+    reportForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+
+        reportMessage.textContent =
+          "✓ Report recorded locally for this demo. Thank you for helping improve campus life.";
+
+        reportMessage.style.color =
+          "#087f5b";
+
+
+        reportForm.reset();
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
